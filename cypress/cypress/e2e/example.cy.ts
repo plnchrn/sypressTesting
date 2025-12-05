@@ -3,8 +3,6 @@ interface User {
   password: string;
 }
 
-
-
 // it("Использует fixture с типами", () => {
 //   cy.fixture<User>("user").then((user) => {
 //     cy.login(user.email, user.password);
