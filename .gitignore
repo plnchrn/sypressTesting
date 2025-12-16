@@ -1,1 +1,14 @@
 .idea
+
+
+puppeteer/node_modules
+puppeteer/.idea
+puppeteer/.env
+puppeteer/package-lock.json
+puppeteer/coverage
+
+cypress/node_modules
+cypress/.idea
+cypress/.env
+cypress/package-lock.json
+cypress/coverage
