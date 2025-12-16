@@ -1,11 +1,14 @@
 {
   "scripts": {
-    "start": "npx cypress open"
+    "start": "npx cypress open",
+    "testemail": "tsx ./test.ts"
   },
   "dependencies": {
     "dotenv": "17.2.3",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-prettier": "5.5.4",
+    "imapflow": "^1.2.0",
+    "mailparser": "^3.9.1",
     "nodemon": "3.1.11",
     "tsx": "4.21.0"
   },
