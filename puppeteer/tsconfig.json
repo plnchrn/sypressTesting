@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "strictNullChecks": true,
+    "module": "ESNext",
+    "target": "ESNext",
+    "baseUrl": ".",
+    "moduleResolution": "Node",
+    "outDir": "dist",
+    "importsNotUsedAsValues": "remove",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+  },
+  "exclude": ["node_modules"]
+}
