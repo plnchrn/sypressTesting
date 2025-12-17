@@ -2,7 +2,7 @@ import { ImapFlow } from "imapflow";
 import dotenv from "dotenv";
 dotenv.config();
 
-export async function readLatestEmail() {
+export async function getCode() {
   const client = new ImapFlow({
     host: "imap.yandex.ru",
     port: 993,
@@ -75,5 +75,3 @@ export async function readLatestEmail() {
     await client.logout();
   }
 }
-
-readLatestEmail();

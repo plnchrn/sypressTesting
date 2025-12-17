@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "npx cypress open",
-    "testemail": "tsx ./test.ts"
+    "testemail": "tsx src/getCode.ts"
   },
   "dependencies": {
     "dotenv": "17.2.3",
