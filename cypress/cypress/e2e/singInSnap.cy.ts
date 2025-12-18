@@ -1,0 +1,32 @@
+describe("Component screenshot", () => {
+  it("sing-in screenshot", () => {
+    cy.visit("https://test-5570x.soundl.ink/sign-up");
+    cy.wait(2000);
+    cy.get("body").compareSnapshot("sing-up", 0.01);
+    cy.visit("https://test-5570x.soundl.ink/sign-in");
+    cy.wait(2000);
+    cy.get("body").compareSnapshot("sing-in", 0.01);
+    cy.get(".input__field").eq(0).type("chepurinaapolina@gmail.com");
+    cy.get(".input__field").eq(1).type("list8899");
+    cy.get(".button_width-all").click();
+    cy.url().should("include", "/create");
+    cy.wait(2000);
+    cy.get("body").compareSnapshot("create", 0.01);
+    cy.get(".menu-top__item-menu").eq(0).click();
+    cy.wait(2000);
+    cy.get("body").compareSnapshot("dashboard", 0.01);
+    cy.get(".page-dashboard__trash").click();
+    cy.wait(2000);
+    cy.get("body").compareSnapshot("trash", 0.01);
+    cy.get(".menu-top__item-menu").eq(1).click();
+    cy.wait(2000);
+    cy.get("body").compareSnapshot("starred", 0.01);
+    cy.get(".menu-top__item-menu").eq(2).click();
+    cy.wait(2000);
+    cy.get("body").compareSnapshot("history", 0.01);
+    cy.get(".user-menu").click();
+    cy.get(".user-menu__item_settings").click();
+    cy.wait(2000);
+    cy.get("body").compareSnapshot("settings", 0.01);
+  });
+});

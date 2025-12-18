@@ -1,9 +1,12 @@
 {
   "scripts": {
-    "start": "npx cypress open",
+    "start": "npx cypress open --env visualRegressionType=regression",
+    "base": "npx cypress run --env visualRegressionType=base --spec \"cypress/e2e/test.cy.ts\"",
+    "base1": "npx cypress open --env visualRegressionType=base",
     "testemail": "tsx src/getCode.ts"
   },
   "dependencies": {
+    "cypress-visual-regression": "^5.3.0",
     "dotenv": "17.2.3",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-prettier": "5.5.4",
