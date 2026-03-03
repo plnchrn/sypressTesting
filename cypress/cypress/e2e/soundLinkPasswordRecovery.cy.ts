@@ -7,10 +7,10 @@ function generateRandomPassword(length: number): string {
   }
   return "test" + result;
 }
-const password = generateRandomPassword(8);
+const password = generateRandomPassword(12) + "@1";
 describe("SoundLink Password Recovery", () => {
   beforeEach(() => {
-    cy.visit("https://test-5570x.soundl.ink/");
+    cy.visit("");
   });
 
   it("Успешная смена пароля", () => {

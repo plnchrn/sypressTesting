@@ -7,6 +7,7 @@ export default defineConfig({
     env: {
       // visualRegressionType: "regression",
     },
+    baseUrl: "https://dev-7700m.soundl.ink",
     screenshotsFolder: "./cypress/snapshots/actual",
 
     setupNodeEvents(on, config) {

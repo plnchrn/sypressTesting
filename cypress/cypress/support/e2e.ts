@@ -17,3 +17,10 @@ addCompareSnapshotCommand();
 
 // Import commands.js using ES2015 syntax:
 import "./commands";
+
+//для загрузки трека на конкурс
+Cypress.on("uncaught:exception", () => false);
+
+Cypress.on("window:before:load", (win) => {
+  win.addEventListener("unhandledrejection", () => {});
+});

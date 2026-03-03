@@ -10,15 +10,15 @@ function generateRandomString(length: number): string {
 const emailGlobal = generateRandomString(10) + "@gmail.com";
 describe("SoundLink Registration", () => {
   beforeEach(() => {
-    cy.visit("https://test-5570x.soundl.ink/");
+    cy.visit("");
   });
   it("Успешная регистрация с валидными данными", () => {
     cy.get(".button_text-color-white").eq(0).click();
     cy.url().should("include", "/sign-up");
     cy.get(".input__field").eq(0).type(emailGlobal);
     cy.get(".input__field").eq(1).type("test");
-    cy.get(".input__field").eq(2).type("password");
-    cy.get(".input__field").eq(3).type("password");
+    cy.get(".input__field").eq(2).type("P@assword188");
+    cy.get(".input__field").eq(3).type("P@assword188");
     cy.get(".button_width-all").click();
     cy.url().should("include", "/create");
   });
@@ -28,8 +28,8 @@ describe("SoundLink Registration", () => {
     cy.url().should("include", "/sign-up");
     cy.get(".input__field").eq(0).type(email);
     cy.get(".input__field").eq(1).type("test");
-    cy.get(".input__field").eq(2).type("password123");
-    cy.get(".input__field").eq(3).type("password");
+    cy.get(".input__field").eq(2).type("P@assword188");
+    cy.get(".input__field").eq(3).type("P@assword1866");
     cy.get(".button_width-all").click();
     cy.get(".error-server").contains("Passwords do not match, please retype.");
   });
@@ -38,8 +38,8 @@ describe("SoundLink Registration", () => {
     cy.url().should("include", "/sign-up");
     cy.get(".input__field").eq(0).type(emailGlobal);
     cy.get(".input__field").eq(1).type("test");
-    cy.get(".input__field").eq(2).type("password");
-    cy.get(".input__field").eq(3).type("password");
+    cy.get(".input__field").eq(2).type("P@assword188");
+    cy.get(".input__field").eq(3).type("P@assword188");
     cy.get(".button_width-all").click();
     cy.get(".error-server").contains("User already exists");
   });
